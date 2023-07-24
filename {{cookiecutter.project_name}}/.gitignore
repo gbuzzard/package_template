@@ -1,6 +1,6 @@
 
-demo/output
-data/
+demo/output/*
+demo/data/*
 
 # Mac OSX files
 .DS_Store
