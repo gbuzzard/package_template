@@ -3,7 +3,7 @@
 
 System Requirements
 -------------------
-1. Python>=3.6
+1. Python>={{cookiecutter.python_version}}
 
 
 Optional System Requirements
@@ -14,6 +14,6 @@ We also recommend:
 
 License
 -------
-The project is licensed under the `BSD 3-Clause <https://github.com/cabouman/svmbir/blob/master/LICENSE>`_ License.
+The project is licensed under the `BSD 3-Clause <https://opensource.org/license/BSD-3-clause/>`_ License.
 
 

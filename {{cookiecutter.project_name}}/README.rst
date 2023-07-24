@@ -17,7 +17,7 @@ Installing
 
     .. code-block::
 
-        git clone git@github.com:cabouman/{{cookiecutter.project_name}}
+        git clone git@github.com:{{cookiecutter.github_use_name}}/{{cookiecutter.project_name}}
 
 2. Install the conda environment and package
 
