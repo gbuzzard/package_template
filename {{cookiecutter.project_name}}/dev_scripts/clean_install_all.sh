@@ -2,19 +2,22 @@
 # This script installs everything from scratch
 
 #####
-# Update the cluster host names, modules, and jax installation as needed
+# Update the cluster host names, modules, and jax installation as needed, here and in
+# get_demo_data_server.sh
 #####
+GPUCLUSTER="gilbreth"
+CPUCLUSTER="brown"
 
-if [[ "$HOSTNAME" == *"gilbreth"* ]]; then
+if [[ "$HOSTNAME" == *"$GPUCLUSTER"* ]]; then
   module load  anaconda/2020.11-py38
-  echo 'gilbreth setting'
+  echo '$GPUCLUSTER setting'
 fi
-if [[ "$HOSTNAME" == *"brown"* ]]; then
+if [[ "$HOSTNAME" == *"$CPUCLUSTER"* ]]; then
   module load  anaconda/2020.11-py38
-  echo 'brown setting'
+  echo '$CPUCLUSTER setting'
 fi
 
-source clean_package.sh
+source remove_package.sh
 source install_conda_environment.sh
 source install_package.sh
 source build_docs.sh
@@ -29,7 +32,16 @@ else
   pip install --upgrade "jax[cpu]"
 fi
 
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
+echo " "
 echo "Use"
-echo "   source get_demo_data_server.sh   "
+echo "${red}   source get_demo_data_server.sh   ${reset}"
 echo "to download data needed for demos"
+echo " "
+echo "Use"
+echo "${red}   conda activate {{cookiecutter.project_name}}   ${reset}"
+echo "to activate the conda environment."
 echo " "
