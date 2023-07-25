@@ -52,6 +52,8 @@ extensions = [
     'sphinx.ext.viewcode'
 ]
 
+bibtex_bibfiles = []  # Change to bibtex_bibfiles = ['refs.bib'] or similar as needed
+
 autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.

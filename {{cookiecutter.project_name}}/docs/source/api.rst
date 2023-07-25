@@ -8,7 +8,7 @@ Primary module:
 
 * {{cookiecutter.project_name}}_ {{cookiecutter.project_description}}
 
-.. {{cookiecutter.project_name}}: {{cookiecutter.project_name}}.html
+.. _{{cookiecutter.project_name}}: {{cookiecutter.project_name}}.html
 .. toctree::
    :titlesonly:
    :hidden:
