@@ -6,7 +6,7 @@
 conda activate {{cookiecutter.project_name}}
 cd ..
 pip install -r requirements.txt
-pip install .
+pip install -e .
 pip install -r demo/requirements.txt
 pip install -r docs/requirements.txt 
 cd dev_scripts
