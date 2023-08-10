@@ -10,7 +10,7 @@ Set up
 
     ``~/Documents/Templates/package_template``
 
-    The parent path, `~/Documents/Templates` will be called 'path' below.
+    The parent path, `~/Documents/Templates` will be called '<path>' below.
 1. In a terminal, activate a conda environment (base is ok).
 1. Install cookiecutter if you haven't already:
 
@@ -26,7 +26,7 @@ Creating a new package
 
 1. Using the conda environment that has cookiecutter, create the new package:
 
-    ``cookiecutter path/package_template/``
+    ``cookiecutter <path>/package_template/``
 
 1. Answer the questions about the package.
 
