@@ -33,4 +33,6 @@ Creating a new package
     The package should then be created in a subdirectory of `Projects`.
     The name of the subdirectory is the package name you supplied as one of your answers.
 
-1. Upload your new repo to github using the same name.
+1. Upload your new repo to github using the same name. See the `documentation`_ for instructions if needed.
+
+.. _documentation: https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#initializing-a-git-repository
