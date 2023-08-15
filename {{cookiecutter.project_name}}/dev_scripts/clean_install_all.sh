@@ -10,7 +10,7 @@ CPUCLUSTER="brown"
 
 if [[ "$HOSTNAME" == *"$GPUCLUSTER"* ]]; then
   module load  anaconda/2020.11-py38
-  echo '$GPUCLUSTER setting'
+  echo "$GPUCLUSTER setting"
   gcc --version
   conda config --add pkgs_dirs /scratch/$GPUCLUSTER/$USERNAME/.conda/pkgs
   CONDA_ENVS_PATH="/scratch/$GPUCLUSTER/$USERNAME/.conda/envs"
@@ -18,7 +18,7 @@ if [[ "$HOSTNAME" == *"$GPUCLUSTER"* ]]; then
 fi
 if [[ "$HOSTNAME" == *"$CPUCLUSTER"* ]]; then
   module load  anaconda/2020.11-py38
-  echo '$CPUCLUSTER setting'
+  echo "$CPUCLUSTER setting"
   conda config --add pkgs_dirs /scratch/$CPUCLUSTER/$USERNAME/.conda/pkgs
   CONDA_ENVS_PATH="/scratch/$CPUCLUSTER/$USERNAME/.conda/envs"
   conda config --add envs_dirs /scratch/$CPUCLUSTER/$USERNAME/.conda/envs
