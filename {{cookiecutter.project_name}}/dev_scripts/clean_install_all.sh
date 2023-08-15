@@ -11,16 +11,21 @@ CPUCLUSTER="brown"
 if [[ "$HOSTNAME" == *"$GPUCLUSTER"* ]]; then
   module load  anaconda/2020.11-py38
   echo '$GPUCLUSTER setting'
+  gcc --version
+  conda config --add pkgs_dirs /scratch/$GPUCLUSTER/$USERNAME/.conda/pkgs
+  CONDA_ENVS_PATH="/scratch/$GPUCLUSTER/$USERNAME/.conda/envs"
+  conda config --add envs_dirs /scratch/$GPUCLUSTER/$USERNAME/.conda/envs
 fi
 if [[ "$HOSTNAME" == *"$CPUCLUSTER"* ]]; then
   module load  anaconda/2020.11-py38
   echo '$CPUCLUSTER setting'
+  conda config --add pkgs_dirs /scratch/$CPUCLUSTER/$USERNAME/.conda/pkgs
+  CONDA_ENVS_PATH="/scratch/$CPUCLUSTER/$USERNAME/.conda/envs"
+  conda config --add envs_dirs /scratch/$CPUCLUSTER/$USERNAME/.conda/envs
 fi
 
 source remove_package.sh
 source install_conda_environment.sh
-source install_package.sh
-source build_docs.sh
 
 if [[ "$HOSTNAME" == *"gilbreth"* ]]; then
   pip install --upgrade "jax[cuda12_pip]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
@@ -31,6 +36,9 @@ if [[ "$HOSTNAME" == *"gilbreth"* ]]; then
 else
   pip install --upgrade "jax[cpu]"
 fi
+
+source install_package.sh
+source build_docs.sh
 
 red=`tput setaf 1`
 green=`tput setaf 2`
