@@ -5,6 +5,7 @@ cd ..
 /bin/rm -r docs/build
 /bin/rm -r dist
 /bin/rm -r {{cookiecutter.project_name}}.egg-info
+/bin/rm -r build
 
 pip uninstall {{cookiecutter.project_name}}
 
